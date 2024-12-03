@@ -1,5 +1,5 @@
 //profile-title: arminVPN
-//profile-update-interval: 1
+//profile-update-interval: 24
 //subscription-userinfo: upload=0; download=0; total=214748364800; expire=1740993232
 //profile-web-page-url: https://hiddify.com
 warp://p1@188.114.97.170:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
