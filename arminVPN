@@ -1,6 +1,57 @@
 //profile-title: arminVPN
 //profile-update-interval: 1
-//subscription-userinfo: upload=0; download=0; total=214748364800; expire=1740993232
+from datetime import datetime, timedelta
+
+# اطلاعات کاربر (مقادیر اولیه)
+userinfo = {
+    "upload": 0,  # مصرف آپلود (بایت)
+    "download": 0,  # مصرف دانلود (بایت)
+    "total": 214748364800,  # سقف مصرف (بایت) - اینجا 200 گیگابایته
+    "expire": 1740993232  # زمان انقضا (یونیکس تایم‌استمپ)
+}
+
+# تابع برای تبدیل یونیکس تایم‌استمپ به تاریخ در منطقه زمانی ایران (بدون pytz)
+def convert_to_iran_time(unix_timestamp):
+    # زمان فعلی به UTC
+    dt_utc = datetime.utcfromtimestamp(unix_timestamp)
+    
+    # اختلاف زمانی ایران با UTC = +3:30
+    iran_time = dt_utc + timedelta(hours=3, minutes=30)
+    
+    return iran_time.strftime("%Y-%m-%d %H:%M:%S")  # فرمت تاریخ و ساعت
+
+# تابع برای آپدیت مصرف کاربر
+def update_usage(userinfo, new_upload, new_download):
+    current_time = int(datetime.now().timestamp())  # زمان فعلی به یونیکس تایم
+    if current_time >= userinfo["expire"]:
+        expire_date = convert_to_iran_time(userinfo["expire"])
+        return f"Account expired on {expire_date}. Access denied."
+    
+    # آپدیت آپلود و دانلود
+    userinfo["upload"] += new_upload
+    userinfo["download"] += new_download
+    
+    # بررسی باقی‌مانده
+    total_used = userinfo["upload"] + userinfo["download"]
+    remaining = userinfo["total"] - total_used
+
+    if remaining <= 0:
+        return "Data limit exceeded. Access denied."
+
+    return f"Usage updated: Upload = {userinfo['upload']} bytes, Download = {userinfo['download']} bytes, Remaining = {remaining} bytes"
+
+# شبیه‌سازی مصرف کاربر
+new_upload = 500 * (1024 ** 2)  # 500 مگابایت آپلود
+new_download = 1 * (1024 ** 3)  # 1 گیگابایت دانلود
+
+# بروزرسانی
+result = update_usage(userinfo, new_upload, new_download)
+print(result)
+
+# نمایش زمان انقضا به وقت ایران
+expire_date = convert_to_iran_time(userinfo["expire"])
+print(f"Account Expiry Date (Iran Time): {expire_date}")
+
 //profile-web-page-url: https://hiddify.com
 warp://p1@188.114.97.170:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs1
 warp://162.159.192.96:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs2
