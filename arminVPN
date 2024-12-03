@@ -5,3 +5,7 @@
 warp://p1@188.114.97.170:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
 warp://162.159.192.96:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
 warp://162.159.192.58:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+
+warp://188.114.98.4:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.192.147:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.195.18:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
