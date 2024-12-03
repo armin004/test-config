@@ -2,9 +2,9 @@
 //profile-update-interval: 1
 //subscription-userinfo: upload=0; download=0; total=214748364800; expire=1740993232
 //profile-web-page-url: https://hiddify.com
-warp://p1@188.114.97.170:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs1
-warp://162.159.192.96:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs2
-warp://162.159.192.58:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs3
-warp://188.114.98.4:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs4
-warp://162.159.192.147:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs5
-warp://162.159.195.18:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPNs6
+warp://p1@188.114.97.170:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.192.96:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.192.58:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://188.114.98.4:5279?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.192.147:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
+warp://162.159.195.18:934?ifp=4-8&ifps=40-80&ifpd=20-40&ifpm=m4&&detour=warp://auto#arminVPN
